@@ -13,7 +13,7 @@ body {
 }
 
 .calculator {
-  background: white;
+  background: #98a4a9;
   width: 400px;
   border-radius: 12px;
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
@@ -21,7 +21,7 @@ body {
 
 /* Display */
 .calculator-display {
-  background: black;
+  background: rgba(25, 25, 25, 0.8);
   color: white;
   margin: 0;
   display: flex;
@@ -70,7 +70,7 @@ button {
   font-size: 20px;
   font-weight: 100;
   border: none;
-  background: rgb(200, 200, 200);
+  background: rgb(224, 224, 224);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -88,13 +88,13 @@ button:focus {
 }
 
 .operator {
-  background: grey;
+  background: #e1c832;
   color: white;
   font-size: 30px;
 }
 
 .clear {
-  background: rgb(255, 40, 40);
+  background: rgb(225, 80, 80);
   color: white;
 }
 
