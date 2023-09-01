@@ -55,7 +55,29 @@ function useOperator(operator) {
     calculatorDisplay.textContent = calculation;
     firstValue = calculation;
   }
+  // Ready for next value, store operator
+  awaitingNextValue = true;
+  operatorValue = operator;
+}
 
+// Add Event Listeners for numbers, operators, decimal
+inputBtns.forEach((inputBtn) => {
+  if (inputBtn.classList.length === 0) {
+    inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
+  } else if (inputBtn.classList.contains('operator')) {
+    inputBtn.addEventListener('click', () => useOperator(inputBtn.value));
+  } else if (inputBtn.classList.contains('decimal')) {
+    inputBtn.addEventListener('click', () => addDecimal());
+  }
+});
+
+// Reset all values, display
+function resetAll() {
+  firstValue = 0;
+  operatorValue = '';
+  awaitingNextValue = false;
+  calculatorDisplay.textContent = '0';
+}
 
 // Event Listener
 clearBtn.addEventListener('click', resetAll);
